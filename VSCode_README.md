@@ -260,17 +260,11 @@ A4 列向量，印出結果與A2完全相同，但型態不同[R1]:
 
 使用\( \, {\color{red}EIG} \, \)類別和建構子參數 : 系統(狀態)矩陣\( {\color{red}A} \)，可求得特徵值矩陣\( {\color{red}D} \)和特徵向量矩陣 \( {\color{red}Q} \)。
 
-一階常微分齊次解 ： 
+一階常微分齊次解 ： \[ [ \enspace y_h(t) \enspace] = Hexp(D, Q, t) \ast d \]
 
-\( [ \enspace y_h(t) \enspace] = Hexp(D, Q, t) \ast d \)
+二階常微分齊次解 ： \[ [ \enspace \dot{y_h}(t) \enspace | \enspace y_h(t) \enspace] = Hexp(D, Q, t) \ast d  \]
 
-二階常微分齊次解 ： 
-
-\( [ \enspace \dot{y_h}(t) \enspace | \enspace y_h(t) \enspace] = Hexp(D, Q, t) \ast d  \)
-
-\( {\color{red} 同理並且依此類推} \enspace \) 三階常微分齊次解 ： 
-
-\( [ \enspace \ddot{y_h}(t) \enspace | \enspace \dot{y_h}(t) \enspace | \enspace y_h(t) \enspace] = Hexp(D, Q, t) \ast d \)
+\( {\color{red} 同理並且依此類推} \enspace \) 三階常微分齊次解 ： \[ [ \enspace \ddot{y_h}(t) \enspace | \enspace \dot{y_h}(t) \enspace | \enspace y_h(t) \enspace] = Hexp(D, Q, t) \ast d \]
 
 Hexp(D, Q, t) 就是 \( \enspace {\color{orange} CxHexp } \enspace \) 類別，亦是 \( { \color{fuchsia} 狀態變數響應函數【 State \enspace Variables \enspace Response \enspace Function 】 } \)，無論在維基百科的 State-Space Representation 或是其他論文，目前均沒有提到，是由本人獨自推導出來，但尚待評論。 \( \enspace {\color{orange} d } \enspace \) 就是係數向量，由初始值或是邊界值來決定。初始值則參考App_6J儲存庫( \( Repository \) )，邊界值則參考App_6M儲存庫( \( Repository \) )。
 
